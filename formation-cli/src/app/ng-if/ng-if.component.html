@@ -1,0 +1,13 @@
+<p>
+  ng-if works!
+</p>
+<div *ngIf="isDisplay"><p>Formation Angular</p></div>
+
+<div *ngIf="isDisplay; else title"><p>Formation Spring</p></div>
+<ng-template #title><p>Nom de la formation</p></ng-template>
+
+<div *ngIf="isClick">
+  <p>Titre: {{formation.nom}}</p>
+  <p>Description: {{formation.description}}</p>
+</div>
+<button (click)="onclick()">Click</button>
