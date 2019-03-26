@@ -9,12 +9,16 @@ import {Formation} from '../model/Formation';
 export class ForComponent implements OnInit {
   formations:Array<Formation> = [];
 
-  getColorByElement(isFirst:boolean=false,isLast:boolean=false){
-    return isFirst ? 'red' : isLast ? 'green' : 'black';
+  getColorByElementRed(isFirst:boolean=false):boolean{
+    return isFirst ? true : false;
   }
 
-  getColorByElementBack(isEven:boolean=false){
-    return isEven ? 'gray' : 'white';
+  getColorByElementGreen(isLast:boolean=false):boolean{
+    return isLast ? true : false;
+  }
+
+  getColorByElementBack(isEven:boolean=false):boolean{
+    return isEven ? true : false;
   }
 
   constructor() { }
