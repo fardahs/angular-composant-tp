@@ -8,11 +8,18 @@ import {Todo} from '../model/Todo';
 })
 export class TodoContainerComponent implements OnInit {
 
-  todos:Array<Todo> = [new Todo('Send a mail', false),
-    new Todo('Module angular', false),
-    new Todo('module javascript', true),
-    new Todo('module typescript', true)
-  ];//liste todos
+  todos:Array<Todo> = [];//liste todos
+
+  addTodo(todo){
+    this.todos.push(new Todo(todo, false))
+    console.log(todo)
+  }
+
+  resetTodo(reset){
+
+      this.todos = [];
+
+  }
 
   constructor() { }
 

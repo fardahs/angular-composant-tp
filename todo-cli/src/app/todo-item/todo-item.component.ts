@@ -14,7 +14,9 @@ export class TodoItemComponent implements OnInit {
   handleCheckBoxChange(){
     this.todo.isDone = !this.todo.isDone;
   }
-
+  handleClick() {
+    console.log("TODO", this.todo);
+  }
 
   ngOnInit() {
   }
