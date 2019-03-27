@@ -9,8 +9,11 @@ import {Todo} from '../model/Todo';
 
 export class TodoListComponent implements OnInit {
   @Input()
-  todo:Todo;
+  todoList:Array<Todo> = [];
 
+  getLength():number{
+    return this.todoList.length;
+  }
   constructor() { }
 
   ngOnInit() {

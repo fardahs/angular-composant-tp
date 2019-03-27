@@ -8,7 +8,13 @@ import {Todo} from '../model/Todo';
 export class TodoItemComponent implements OnInit {
   @Input()
   todo:Todo;
+
   constructor() { }
+
+  handleCheckBoxChange(){
+    this.todo.isDone = !this.todo.isDone;
+  }
+
 
   ngOnInit() {
   }
