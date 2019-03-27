@@ -11,6 +11,10 @@ import { VariableComponent } from './variable/variable.component';
 import { NgIfComponent } from './ng-if/ng-if.component';
 import { ForComponent } from './for/for.component';
 import { NgstyleComponent } from './ngstyle/ngstyle.component';
+import { FormationItemComponent } from './formation-item/formation-item.component';
+import { PlaygroundComponent } from './playground/playground.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { LifecycleOnchangeComponent } from './lifecycle-onchange/lifecycle-onchange.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { NgstyleComponent } from './ngstyle/ngstyle.component';
     VariableComponent,
     NgIfComponent,
     ForComponent,
-    NgstyleComponent
+    NgstyleComponent,
+    FormationItemComponent,
+    PlaygroundComponent,
+    LifecycleComponent,
+    LifecycleOnchangeComponent
   ],
   imports: [
     BrowserModule,

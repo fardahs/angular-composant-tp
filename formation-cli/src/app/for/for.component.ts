@@ -9,25 +9,13 @@ import {Formation} from '../model/Formation';
 export class ForComponent implements OnInit {
   formations:Array<Formation> = [];
 
-  getColorByElementRed(isFirst:boolean=false):boolean{
-    return isFirst ? true : false;
-  }
-
-  getColorByElementGreen(isLast:boolean=false):boolean{
-    return isLast ? true : false;
-  }
-
-  getColorByElementBack(isEven:boolean=false):boolean{
-    return isEven ? true : false;
-  }
-
   constructor() { }
 
   ngOnInit() {
     this.formations = [
-      new Formation('Module Angular'),
-      new Formation('Module JavaScript'),
-      new Formation('Module TypeScript'),
+      new Formation('Module Angular','angular 6', 12.0,'November 14, 2019','November 24, 2019' ),
+      new Formation('Module JavaScript', 'js',54,'November 14, 2019','November 24, 2019'),
+      new Formation('Module TypeScript', 'ts', 56,'November 14, 2019','November 24, 2019'),
     ]
   }
 
