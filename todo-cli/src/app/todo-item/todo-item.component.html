@@ -1,0 +1,5 @@
+<div>
+  <h4 [ngClass]="{'txtCheck':todo.isDone}">{{todo?.title | uppercase}}</h4>
+  <input type="checkbox" [checked]="todo.isDone" (change)="handleCheckBoxChange()">
+
+</div>

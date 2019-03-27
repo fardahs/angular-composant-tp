@@ -8,7 +8,6 @@ import {Formation} from '../model/Formation';
 })
 export class FormationItemComponent implements OnInit {
 
-
   @Input()
   formation:Formation;
 
