@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Todo} from '../model/Todo';
+import TodoServices from "../services/TodoServices";
 
 @Component({
   selector: 'app-todo-container',
@@ -8,23 +9,26 @@ import {Todo} from '../model/Todo';
 })
 export class TodoContainerComponent implements OnInit {
 
-  todos:Array<Todo> = [];//liste todos
+  todos:Array<Todo> = [];
+
+  constructor(private todoService:TodoServices) { }
 
   addTodo(todo){
-    this.todos.push(new Todo(todo, false))
-    console.log(todo)
+    this.todoService.addTodo(todo);
+    console.log(todo);
   }
 
   resetTodo(reset){
-
-      this.todos = [];
-
+    this.todoService.deleteTodo().then((data) =>{
+      this.todos = data;
+    })
+    console.log(reset);
   }
 
-  constructor() { }
-
   ngOnInit() {
-
+      this.todoService.getTodo().then((data) => {
+        this.todos = data;
+      })
   }
 
 }

@@ -9,11 +9,11 @@ import {Todo} from '../model/Todo';
 
 export class TodoListComponent implements OnInit {
   @Input()
-  todoList:Array<Todo> = [];
+  todos:Array<Todo> = [];
 
   getLength(){
 
-    return this.todoList.length == 0 ? "Vous n'avez aucun todo": 'Nombre todos '+ this.todoList.length;
+    return this.todos.length == 0 ? "Vous n'avez aucun todo": 'Nombre todos '+ this.todos.length;
   }
   constructor() { }
 
