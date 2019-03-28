@@ -34,7 +34,7 @@ import { LifecycleOnchangeComponent } from './lifecycle-onchange/lifecycle-oncha
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
