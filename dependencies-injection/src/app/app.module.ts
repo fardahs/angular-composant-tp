@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormationListComponent } from './formation-list/formation-list.component';
 import FormationService from "./services/FormationService";
+import FormationApi from "./services/FormationApi";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import FormationService from "./services/FormationService";
     AppRoutingModule
   ],
   providers: [
-    FormationService
+    FormationService,
+    FormationApi
   ],
   bootstrap: [AppComponent]
 })
