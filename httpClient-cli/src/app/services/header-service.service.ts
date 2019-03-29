@@ -12,7 +12,7 @@ export class HeaderServiceService {
       .set('content-Type', 'application/json');
 
     this.http.get(`http://sample.com`, {headers})
-      .subscribe(() => {});
+      .subscribe((head) => {console.log(head)});
 
   }
 }

@@ -13,7 +13,7 @@ export class ParamsServiceService {
       .set('login', 'nartwark');
 
     this.http.get(`http://sample.com`, {params})
-      .subscribe(() => {});
+      .subscribe((p) => {console.log(p)});
 
   }
 }

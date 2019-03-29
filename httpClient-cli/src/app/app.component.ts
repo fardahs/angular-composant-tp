@@ -13,12 +13,26 @@ import {SamplesErrorInterceptorServiceService} from "./services/samples-error-in
 export class AppComponent {
   title = 'httpClient-cli';
 
+  userdata:Array<Object[]> = [];
+  params:any;
+  headers:any;
+
   constructor(private github:GithubApiService, private param:ParamsServiceService,
               private interceptor:SampleHeadersInterceptorService,
-              private  headers:HeaderServiceService, private error:SamplesErrorInterceptorServiceService ){}
+              private  header:HeaderServiceService, private error:SamplesErrorInterceptorServiceService ){}
 
-  user(){
-    this.github.getUser('https://api.punkapi.com/v2/beers/1/');
+  ngOnInit(): void{
+    
+    this.github.getUser('beers/1').then( (resp:any) =>{
+      this.userdata = resp;
+      console.log(this.userdata[0]);
+    });
+
+    this.params=this.param.sampleParams();
+    this.headers=this.header.sampleParams();
+  }
+  
+
   }
 
-}
+

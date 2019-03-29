@@ -4,8 +4,10 @@
     Welcome to {{ title }}!
   </h1>
 </div>
-<p>
-  <a href="{{user()}}">Github</a>
-</p>
-
-<router-outlet></router-outlet>
+<h2>Data github</h2>
+<div *ngFor = "let data of userdata">
+  <p>id : {{data.id}}</p>
+  <p>Nom : {{data.name}}</p>
+</div>
+<div>{{params}}</div>
+<div>{{headers}}</div>
