@@ -13,12 +13,15 @@ export const ROUTES:Routes = [
   {
     path:PATH_DETAIL + '/:idDetail',
     component:DetailComponent,
-    resolve:{
-      formations: FormationsResolvers
-    },
     children:[
       {path:"", pathMatch:'full', redirectTo:PATH_DETAIL_FORMATIONS},
-      {path:PATH_DETAIL_FORMATIONS + '/:idFormation', component:FormationsComponent},
+      {
+        path:PATH_DETAIL_FORMATIONS + '/:idFormation',
+        component:FormationsComponent,
+        resolve:{
+          formations: FormationsResolvers
+        }
+      },
       {
         path:PATH_DETAIL_SKILLS + '/:idSkills',
         component:ConnaissancesComponent,

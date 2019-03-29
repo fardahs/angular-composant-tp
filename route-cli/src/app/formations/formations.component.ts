@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Formations} from "../model/Formations";
 import {ActivatedRoute, ParamMap} from "@angular/router";
-import {FormationsResolvers} from "../resolvers/FormationsResolvers";
 
 @Component({
   selector: 'app-formations',
@@ -14,14 +13,17 @@ export class FormationsComponent implements OnInit {
   constructor(private route:ActivatedRoute) { }
 
   ngOnInit() {
-    this.route.data.subscribe(data => this.formations =  data['formations']);
-/*
+    this.route.data.subscribe(data =>{
+        this.formations =  data['formations'];
+        console.log(this.formations);
+    }
 
-    this.formations = [
+    );
+
+    /*this.formations = [
       new Formations(1,'angular'),
       new Formations(2,'typescript')
-    ]
-*/
+    ]*/
 
     this.route.paramMap.subscribe((params:ParamMap) => {
       console.log('isFormation', params.get('idFormation'));
