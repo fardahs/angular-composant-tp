@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {PATH_HOME} from "../app.routes.constantes";
+import {ActivatedRoute, ParamMap, Router} from "@angular/router";
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router:Router, private route:ActivatedRoute) { }
 
-  ngOnInit() {
+  navigateToHome(){
+    this.router.navigate([PATH_HOME]);
   }
 
-}
+  ngOnInit() {
+      this.route.paramMap
+        .subscribe((params:ParamMap) => {
+          console.log('isDetail', params.get('idDetail'));
+        });
+
+  }}
