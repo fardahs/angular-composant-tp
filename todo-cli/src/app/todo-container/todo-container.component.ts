@@ -1,6 +1,8 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Todo} from '../model/Todo';
 import TodoServices from "../services/TodoServices";
+import {ApiServiceService} from "../services/api-service.service";
+
 
 @Component({
   selector: 'app-todo-container',
@@ -10,7 +12,7 @@ import TodoServices from "../services/TodoServices";
 export class TodoContainerComponent implements OnInit {
 
   todos:Array<Todo> = [];
-
+  
   constructor(private todoService:TodoServices) { }
 
   addTodo(todo){
@@ -26,9 +28,10 @@ export class TodoContainerComponent implements OnInit {
   }
 
   ngOnInit() {
-      this.todoService.getTodo().then((data) => {
+      this.todoService.getTodo().then((data:any)=>{
         this.todos = data;
-      })
+      });
+
   }
 
 }
