@@ -1,3 +1,7 @@
+.nav{
+  display: flex;
+  
+}
 .nav__item_selected{
   color: blue;
 }

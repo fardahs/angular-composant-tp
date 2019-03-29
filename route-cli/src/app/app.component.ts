@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from "@angular/router";
+import {Formations} from "./model/Formations";
 
 
 @Component({
@@ -10,6 +11,8 @@ import {Router} from "@angular/router";
 export class AppComponent implements OnInit{
   title = 'route-cli';
   idDetail = 1;
+  idFormation = 1;
+  idSkills = 1;
 
   constructor(private router:Router){}
 
