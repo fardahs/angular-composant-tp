@@ -28,8 +28,8 @@ export class AppComponent {
       console.log(this.userdata[0]);
     });
 
-    this.params=this.param.sampleParams();
-    this.headers=this.header.sampleParams();
+    //this.params=this.param.sampleParams();
+    //this.headers=this.header.sampleParams();
   }
   
 

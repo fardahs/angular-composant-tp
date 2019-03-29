@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {resolve} from "url";
+
 
 const API_BASE_URL:string = 'https://api.punkapi.com/v2/';
 const API_USERS:string='users/';
