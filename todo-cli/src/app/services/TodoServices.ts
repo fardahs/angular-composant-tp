@@ -14,8 +14,8 @@ export default class TodoServices{
   }
 
   addTodo(todo:string) {
-    return this.todos.push(new Todo(todo, false))
-    //return this.api.createTodo();
+    //return this.todos.push(new Todo(todo, false))
+    return this.api.createTodo();
   }
 
   deleteTodo():Promise<Array<Todo>> {

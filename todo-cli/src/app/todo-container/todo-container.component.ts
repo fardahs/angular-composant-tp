@@ -12,7 +12,7 @@ import {ApiServiceService} from "../services/api-service.service";
 export class TodoContainerComponent implements OnInit {
 
   todos:Array<Todo> = [];
-  
+
   constructor(private todoService:TodoServices) { }
 
   addTodo(todo){

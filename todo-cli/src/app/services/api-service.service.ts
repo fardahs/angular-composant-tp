@@ -20,7 +20,7 @@ export class ApiServiceService {
 
   createTodo(){
     const params = new HttpParams()
-      .set('${API_TITLE}', '${API_ISDONE}');
+      .set(`${API_TITLE}`, `${API_ISDONE}`);
 
     this.http.get(`${API_BASE_URL}`, {params}).toPromise();
 
