@@ -5,6 +5,7 @@ import {PATH_HOME, PATH_DETAIL, PATH_DETAIL_FORMATIONS, PATH_DETAIL_SKILLS} from
 import {FormationsComponent} from "./formations/formations.component";
 import {ConnaissancesComponent} from "./connaissances/connaissances.component";
 import {LoggedInGuardGuard} from "./guards/logged-in-guard.guard";
+import {FormationsResolvers} from "./resolvers/FormationsResolvers";
 
 
 export const ROUTES:Routes = [
@@ -12,6 +13,9 @@ export const ROUTES:Routes = [
   {
     path:PATH_DETAIL + '/:idDetail',
     component:DetailComponent,
+    resolve:{
+      formations: FormationsResolvers
+    },
     children:[
       {path:"", pathMatch:'full', redirectTo:PATH_DETAIL_FORMATIONS},
       {path:PATH_DETAIL_FORMATIONS + '/:idFormation', component:FormationsComponent},

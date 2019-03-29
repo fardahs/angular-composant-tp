@@ -16,6 +16,7 @@ export class DetailComponent implements OnInit {
   }
 
   ngOnInit() {
+
       this.route.paramMap
         .subscribe((params:ParamMap) => {
           console.log('isDetail', params.get('idDetail'));

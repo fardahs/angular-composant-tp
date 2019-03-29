@@ -9,6 +9,7 @@ import {RouterModule} from "@angular/router";
 import {ROUTES} from "./app.routes";
 import { FormationsComponent } from './formations/formations.component';
 import { ConnaissancesComponent } from './connaissances/connaissances.component';
+import {FormationsResolvers} from "./resolvers/FormationsResolvers";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,7 @@ import { ConnaissancesComponent } from './connaissances/connaissances.component'
     AppRoutingModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [FormationsResolvers],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
