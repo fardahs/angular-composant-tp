@@ -1,0 +1,33 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+</div>
+
+<nav class="nav">
+  <span class="nav__menu">
+  <a href=""
+     [routerLink]="['/']"
+     [routerLinkActiveOptions]="{exact:true}"
+     routerLinkActive="nav__item_selected">Home</a>
+  </span>
+  <span class="nav__menu">
+  <a href=""
+     [routerLink]="['/detail',idDetail]"
+     routerLinkActive="nav__item_selected">Detail</a>
+  </span>
+  <span class="nav__menu">
+  <a href=""
+     [routerLink]="['/detail',idDetail,'formations',idFormation]"
+     routerLinkActive="nav__item_selected">Formation</a>
+  </span>
+  <span class="nav__menu">
+  <a href=""
+     [routerLink]="['/detail',idDetail,'skills',idSkills]"
+     routerLinkActive="nav__item_selected">Skills</a>
+  </span>
+
+</nav>
+
+<router-outlet></router-outlet>
