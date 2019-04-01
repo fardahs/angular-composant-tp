@@ -1,0 +1,31 @@
+<div  *ngFor="let user of users">
+  <h3>{{user.login}}</h3>
+  <h3>{{user.type}}</h3>
+  <img src="{{user.avatar_url}}" alt="avatar user" class="avatar">
+
+<nav>
+  <div class="nav nav-tabs" id="nav-tab" role="tablist">
+
+    <a class="nav-item nav-link active" id="nav-follows-tab" data-toggle="tab" href="" 
+        [routerLink]="['/detail',user,'followers']" role="tab" aria-controls="nav-home" aria-selected="true">Followers</a>
+
+    <a class="nav-item nav-link" id="nav-repos-tab" data-toggle="tab" href="#"  
+        [routerLink]="['/detail',user,'repos']" role="tab" aria-controls="nav-profile" aria-selected="false">Repos</a>
+
+  </div>
+</nav>
+
+<div class="tab-content" id="nav-tabContent">
+
+  <div class="tab-pane fade show active" id="nav-follows" role="tabpanel" aria-labelledby="nav-follows-tab">
+
+</div>
+  </div>
+
+  <div class="tab-pane fade" id="nav-repos" role="tabpanel" aria-labelledby="nav-repos-tab">
+  
+  </div>
+  
+</div>
+
+<router-outlet></router-outlet>
