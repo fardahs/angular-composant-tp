@@ -15,7 +15,7 @@ import { ValidatorsComponent } from './validators/validators.component';
     TemplateComponent,
     TwoWayBindingComponent,
     TypescriptComponent,
-    ValidatorsComponent
+    ValidatorsComponent,
   ],
   imports: [
     BrowserModule,

@@ -17,6 +17,9 @@
     <label>Password: </label>
     <input type="password"
            formControlName="password">
+    <div *ngIf="passwordCtrl.dirty && passwordCtrl.hasError('isPrefixNartawak')">
+      Le champ password ne commence pas par le préfix nk-
+    </div>
   </div>
   <button type="submit"
           [disabled]="userForm.invalid">Login
