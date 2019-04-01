@@ -44,11 +44,12 @@
   </div>
 
   <div>
-  <select formControlName="skills" class="input-angular">
-      <option >TypeScript</option>
+  <select formControlName="skills">
+      <option></option>
+      <option>TypeScript</option>
       <option>JavaScript</option>
       <option>Angular</option>
-    <div *ngIf="skillsCtrl.dirty && skillsCtrl.hasError('required')">
+    <div *ngIf="skillsCtrl.hasError('required')">
       Le champ skills est requis
     </div>
   </select>

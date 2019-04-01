@@ -46,7 +46,6 @@ export class HomeFormComponent implements OnInit {
   handleSubmit()
   {
     console.log('SUBMIT',this.userForm.value);
-
   }
 
   ngOnInit() {
