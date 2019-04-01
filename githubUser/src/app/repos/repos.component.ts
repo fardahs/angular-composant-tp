@@ -9,7 +9,7 @@ import { UserServiceService } from '../services/user-service.service';
 })
 export class ReposComponent implements OnInit {
 
-  user:any;
+  users:Array<Object[]> = [];
 
   constructor(private route: ActivatedRoute, private userService:UserServiceService) { }
 
@@ -21,9 +21,9 @@ export class ReposComponent implements OnInit {
       const login = params.get('user');
       console.log('user', params.get('user'));
 
-      this.userService.getUser(login).then((data) =>{
-        this.user = data
-        console.log(data)
+      this.userService.getUser(login).then((data:any) =>{
+        this.users = data;
+        console.log(data);
       })
 
 });

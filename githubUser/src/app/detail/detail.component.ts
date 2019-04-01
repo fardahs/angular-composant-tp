@@ -8,17 +8,22 @@ import { UserServiceService } from '../services/user-service.service';
   styleUrls: ['./detail.component.css']
 })
 export class DetailComponent implements OnInit {
-  user:any;
+
+  users:Array<Object[]> = [];
+  repos:any;
+  followers:any;
+
   constructor(private route: ActivatedRoute, private router: Router, private userService:UserServiceService) { }
 
   ngOnInit() {
     this.route.paramMap
         .subscribe((params:ParamMap) => {
           const login = params.get('user');
-          console.log('user', login); 
-    this.userService.getUser(login).then((data) =>{
-      this.user = data
-      console.log(data[0])
+          console.log('user', login);
+
+    this.userService.getUser(login).then((data:any) =>{
+      this.users = data;
+      console.log(data);
     });
 
   });
