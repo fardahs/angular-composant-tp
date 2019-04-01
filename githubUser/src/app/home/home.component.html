@@ -1,0 +1,7 @@
+<div class="form-inline">
+  <div class="form-group mx-sm-3 mb-2">
+    <label class="sr-only">Login</label>
+    <input type="text" class="form-control" placeholder="login" [value]="user" (change)="handleChange($event)">
+  </div>
+  <button class="btn btn-primary mb-2" (click)="navigateToDetail()">Valider</button>
+</div>
