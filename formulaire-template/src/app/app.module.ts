@@ -7,13 +7,15 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { TemplateComponent } from './template/template.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { TypescriptComponent } from './typescript/typescript.component';
+import { ValidatorsComponent } from './validators/validators.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TemplateComponent,
     TwoWayBindingComponent,
-    TypescriptComponent
+    TypescriptComponent,
+    ValidatorsComponent
   ],
   imports: [
     BrowserModule,

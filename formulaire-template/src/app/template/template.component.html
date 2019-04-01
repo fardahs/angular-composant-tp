@@ -1,14 +1,25 @@
-<form (ngSubmit)="handleSubmit(loginForm.value)" #loginForm="ngForm">
+<form (ngSubmit)="handleSubmit(userFormTemplate.value)"
+      #userFormTemplate="ngForm">
   <div>
     <label>Email: </label>
-    <input name="email"
-           ngModel>
+    <input name="emailTemplate"
+           ngModel
+           required
+           email
+           #emailTemplate="ngModel">
+
+    <div *ngIf="emailTemplate.dirty && emailTemplate.hasError('email')">
+      Le champ email n'est pas valide
+    </div>
   </div>
+    <div *ngIf="emailTemplate.dirty && emailTemplate.hasError('required')">
+      Le champ email est requis
+    </div>
   <div>
     <label>Password: </label>
     <input type="password"
            name="password"
            ngModel>
   </div>
-  <button type="submit">Login</button>
+  <button type="submit" [disabled]="userFormTemplate.invalid">Login</button>
 </form>
